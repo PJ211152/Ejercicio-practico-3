@@ -1,0 +1,48 @@
+/*--------Contenedores--------*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navColor{
+    background-color: #51D093;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/*Contenedor general para los contenidos*/
+.container_gen{
+    flex: 1;
+    padding: 10px 20px;
+}
+
+footer{
+    background-color: black;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 5px;
+}
+
+.iconContainer{
+    width: 15px;
+    height: 20px;
+    float: left;
+    overflow: hidden;
+}
+
+/*--------Fuentes y colores--------*/
+
+.fontWhite{
+    color: white;
+}
+
+.fontCenter{
+    text-align: center;
+}
+
+/*--------Funciones con el mouse--------*/
+
+.hoverIcons:hover{
+ color: white;
+}
