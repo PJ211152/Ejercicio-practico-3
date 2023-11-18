@@ -12,14 +12,20 @@ function contar(obj){
 
 function mostrarProductos(){
     const productos = JSON.parse(localStorage.getItem('productos'));
-    let nProd = 1;
-    for(let keys in productos){
+    for(let i = 0; i<productos.length;i++){
+        let producto = productos[i];
+
         container.innerHTML +=`
-        <div class"row">
+        <div class="col-12 container_individual fontCenter">
+        <h3 class='fontCenter'>${producto.name}</h3>
+        <img src='${producto.image}' class='product_image'>
+        <h4 class='mt-4'>Precio: $${producto.price}</h4>
+        <button class='btn btn-success'>Comprar</button>
         </div>
         `
+        
     }
 }
 
-
+mostrarProductos();
 console.log(Object.values(productos1)) 
