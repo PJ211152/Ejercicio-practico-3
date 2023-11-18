@@ -1,10 +1,15 @@
 const btnCarrito = document.getElementById("icon_compra");
+const userList = JSON.parse(localStorage.getItem('usuarios'));
+  const user = userList[0];
 
 //Esta funcion añade la cuenta de admin y algunos productos al local storage
 function initiation() {
+
+
   if (!localStorage.getItem("usuarios")) {
-    let usuarios = {
-      admin: {
+    let usuarios = [
+      {
+        id:0,
         name: "admin",
         lastname: "admin",
         username: "admin",
@@ -12,7 +17,7 @@ function initiation() {
         email: "admin@gmail.com",
         password: "admin",
       },
-    };
+    ];
 
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
   }
@@ -49,6 +54,55 @@ function initiation() {
 
     localStorage.setItem('productos', JSON.stringify(productos));
   }
+
+  if(localStorage.getItem('sesion')){
+    const btnSesion = document.getElementById('formSesion');
+
+    if(user.id == 0){
+      if(document.URL.includes('index.html')){
+      btnSesion.innerHTML =`
+      <li><a class="dropdown-item" href="pages/adminProfile.html" >Administrador</a></li>
+      <li><a class="dropdown-item" href="index.html" id="closeSesion">Cerrar sesion</a></li>
+      `;
+
+      }else{
+        btnSesion.innerHTML =`
+      <li><a class="dropdown-item" href="adminProfile.html" >Administrador</a></li>
+      <li><a class="dropdown-item" href="../index.html" id="closeSesion">Cerrar sesion</a></li>
+      `;
+      }
+    }else{
+      if(document.URL.includes('index.html')){
+        btnSesion.innerHTML =`
+        <li><a class="dropdown-item" href="pages/userProfile.html" >Perfil</a></li>
+        <li><a class="dropdown-item" href="index.html" id="closeSesion">Cerrar sesion</a></li>
+        `;
+  
+        }else{
+          btnSesion.innerHTML =`
+        <li><a class="dropdown-item" href="userProfile.html" >Perfil</a></li>
+        <li><a class="dropdown-item" href="../index.html" id="closeSesion">Cerrar sesion</a></li>
+        `;
+        }
+    }
+  }
+
+  const btnCerrarSesion = document.getElementById('closeSesion');
+
+  btnCerrarSesion.onclick = function(){
+    if(btnCerrarSesion != null){
+      localStorage.removeItem('sesion');
+      if(document.URL.includes('index.html')){
+        document.location.href = 'index.html'
+  
+        }else{
+          document.location.href = '../index.html'
+        }
+    }
+  }
+
 };
+
+
 
 initiation();
