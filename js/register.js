@@ -16,7 +16,6 @@ btnRegister.onclick = function () {
       inputSurname.value != "" &&
       inputUsername.value != "" &&
       inputNumber.value != "" &&
-      inputLocation.value != "" &&
       inputEmail.value != "" &&
       inputPass.value != ""
     ) {

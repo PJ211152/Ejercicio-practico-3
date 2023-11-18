@@ -1,6 +1,5 @@
 const btnCarrito = document.getElementById("icon_compra");
-const userList = JSON.parse(localStorage.getItem('usuarios'));
-  const user = userList[0];
+const sesion = JSON.parse(localStorage.getItem('sesion'));
 
 //Esta funcion añade la cuenta de admin y algunos productos al local storage
 function initiation() {
@@ -58,7 +57,7 @@ function initiation() {
   if(localStorage.getItem('sesion')){
     const btnSesion = document.getElementById('formSesion');
 
-    if(user.id == 0){
+    if(sesion.id == 0){
       if(document.URL.includes('index.html')){
       btnSesion.innerHTML =`
       <li><a class="dropdown-item" href="pages/adminProfile.html" >Administrador</a></li>
@@ -89,17 +88,20 @@ function initiation() {
 
   const btnCerrarSesion = document.getElementById('closeSesion');
 
-  btnCerrarSesion.onclick = function(){
-    if(btnCerrarSesion != null){
-      localStorage.removeItem('sesion');
-      if(document.URL.includes('index.html')){
-        document.location.href = 'index.html'
-  
-        }else{
-          document.location.href = '../index.html'
-        }
+  if(btnCerrarSesion != null){
+    btnCerrarSesion.onclick = function(){
+      if(btnCerrarSesion != null){
+        localStorage.removeItem('sesion');
+        if(document.URL.includes('index.html')){
+          document.location.href = 'index.html'
+    
+          }else{
+            document.location.href = '../index.html'
+          }
+      }
     }
   }
+  
 
 };
 
