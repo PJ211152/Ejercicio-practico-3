@@ -11,6 +11,17 @@ body{
     border-bottom-right-radius: 15px;
 }
 
+.container_parrafo{
+    text-align: justify;
+    background-color: #CBCBCB;
+    padding: 0.5em;
+    border-radius: 20px;
+}
+
+#container_products{
+    padding: 10px;
+}
+
 /*Contenedor general para los contenidos*/
 .container_gen{
     flex: 1;
