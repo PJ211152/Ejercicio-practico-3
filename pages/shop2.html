@@ -1,221 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css"/>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../bootstrap/icons/bootstrap-icons-1.11.1/bootstrap-icons.min.css"/>
-    <script src="../js/index.js" defer></script>
-    <title>Tienda de electronica</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../bootstrap/icons/bootstrap-icons-1.11.1/bootstrap-icons.min.css" />
+  <script src="../js/index.js" defer></script>
+  <title>Tienda de electronica</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light navColor">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="../src/Logo.svg"> Tienda de articulos</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html"><i class="bi-house"></i> Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="" onclick="totalCompra()"><i class="bi bi-basket"></i>Comprar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"><i class="bi bi-card-text"></i> Sobre nosotros</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-people-fill"></i> Sesion
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="formSesion">
-                  <li><a class="dropdown-item" href="login.html">Iniciar sesion</a></li>
-                  <li><a class="dropdown-item" href="register.html">Registrarse</a></li>
-                </ul>
-              </li>
-              <li class="nav-item" id="icon_compra">
-                
-              </li>
+  <nav class="navbar navbar-expand-lg navbar-light navColor">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../src/Logo.svg"> Tienda de articulos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html"><i class="bi-house"></i> Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" onclick="totalCompra()"><i class="bi bi-basket"></i> Realizar Comprar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><i class="bi bi-card-text"></i> Sobre nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-people-fill"></i> Sesion
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="formSesion">
+              <li><a class="dropdown-item" href="login.html">Iniciar sesion</a></li>
+              <li><a class="dropdown-item" href="register.html">Registrarse</a></li>
             </ul>
+          </li>
+          <li class="nav-item" id="icon_compra">
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container_gen">
+    <h3 class="fontCenter">Mira nuestros articulos:</h3>
+    <div id="container_products">
+
+      <div class="container" id="contenedorMaestro">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+
+              <img src="../img/DDEK.jpg" alt="discoExterno" class="bd-placeholder-img card-img-top" width="100%"
+                height="225" role="img">
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em" ;>Disco
+                Duro Externo</text><img>
+              <div class="card-body">
+                <p class="card-text">Disco duro externo de la marca Kingston, con capacidad de 475GB, al precio de $32.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+
+                  <div class="form-check">
+                    <input class="form-check-input producto1" type="checkbox" value="" id="precio1">
+                    <label class="form-check-label" for="precio1">
+                      Añadir al carrito
+                    </label>
+                  </div>
+                  <!--button class="btn btn-primary rounded-pill px-3" type="button" onclick="totalCompra()">Comprar</button-->
+
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="col">
+
+            <div class="card shadow-sm">
+
+              <img src="../img/DDEK.jpg" alt="Enclosure" class="bd-placeholder-img card-img-top" width="100%"
+                height="225" role="img">
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em"
+                ;>Enclosure</text><img>
+              <div class="card-body">
+                <p class="card-text">Enclosure para poder conectar su disco duro externo a una computadora a $16.</p>
+                <div class="d-flex justify-content-between align-items-center">
+
+                  <div class="form-check">
+                    <input class="form-check-input producto1" type="checkbox" value="" id="precio2">
+                    <label class="form-check-label" for="precio2">
+                      Añadir al carrito
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="../img/microsd.jpg" alt="microSD" class="bd-placeholder-img card-img-top" width="100%"
+                height="225" role="img">
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em" ;>Tarjeta
+                MicroSD</text><img>
+              <div class="card-body">
+                <p class="card-text">Tarjeta MicroSD de 128GB original de Nintendo, para tener más espacio dentro de su
+                  Nintendo Switch a $28</p>
+                <div class="d-flex justify-content-between align-items-center">
+
+                  <div class="form-check">
+                    <input class="form-check-input producto1" type="checkbox" value="" id="precio3">
+                    <label class="form-check-label" for="precio3">
+                      Añadir al carrito
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="../img/contact.jpg" alt="contacCleaner" class="bd-placeholder-img card-img-top" width="100%"
+                height="225" role="img">
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em" ;>Contact
+                Cleaner</text><img>
+              <div class="card-body">
+                <p class="card-text">Producto utilizado para poder limpiar componentes electrónicos a $12.</p>
+                <div class="d-flex justify-content-between align-items-center">
+
+                  <div class="form-check">
+                    <input class="form-check-input producto1" type="checkbox" value="" id="precio4">
+                    <label class="form-check-label" for="precio4">
+                      Añadir al carrito
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="../img/pasta.jpg" alt="pastaTermica" class="bd-placeholder-img card-img-top" width="100%"
+                height="225" role="img">
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em" ;>Pasta
+                Termica</text><img>
+              <div class="card-body">
+                <p class="card-text">¿Desea limpiar a fondo su computadora? No olvide cambiar la pasta térmica en el
+                  procesador por $15.</p>
+                <div class="d-flex justify-content-between align-items-center">
+
+                  <div class="form-check">
+                    <input class="form-check-input producto1" type="checkbox" value="" id="precio5">
+                    <label class="form-check-label" for="precio5">
+                      Añadir al carrito
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="../img/cargador.jpg" alt="cargadorUniversal" class="bd-placeholder-img card-img-top"
+                width="100%" height="225" role="img">
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em"
+                ;>Cargador Universal</text><img>
+              <div class="card-body">
+                <p class="card-text">La mejor opción para poder encontrar un nuevo cargador para uno o varios equipos
+                  cuyo cargador original es difícil de encontrar a $23.</p>
+                <div class="d-flex justify-content-between align-items-center">
+
+                  <div class="form-check">
+                    <input class="form-check-input producto1" type="checkbox" value="" id="precio6">
+                    <label class="form-check-label" for="precio6">
+                      Añadir al carrito
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
-      </nav> 
-
-      <div class="container_gen">
-        <h3 class="fontCenter">Mira nuestros articulos:</h3>
-        <div id="container_products">
-
-          <div class="container" id="contenedorMaestro">
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
-                <div class="card shadow-sm">
-    
-                  <img src="../img/DDEK.jpg" alt="discoExterno" class="bd-placeholder-img card-img-top"
-                    width="100%" height="225" role="img"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em";>Disco Duro Externo</text><img>
-                  <div class="card-body">
-                    <p class="card-text">Disco duro externo de la marca Kingston, con capacidad de 475GB, al precio de $32.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      
-                      <div class="form-check">
-                        <input class="form-check-input producto1" type="checkbox" value="" id="precio1">
-                        <label class="form-check-label" for="precio1">
-                          Añadir al carrito
-                        </label>
-                      </div>
-                      <!--button class="btn btn-primary rounded-pill px-3" type="button" onclick="totalCompra()">Comprar</button-->
-    
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-    
-                <div class="card shadow-sm">
-                  
-                    <img src="../img/DDEK.jpg" alt="Enclosure" class="bd-placeholder-img card-img-top"
-                    width="100%" height="225" role="img"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em";>Enclosure</text><img>
-                  <div class="card-body">
-                    <p class="card-text">Enclosure para poder conectar su disco duro externo a una computadora a $16.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-    
-                      <div class="form-check">
-                        <input class="form-check-input producto1" type="checkbox" value="" id="precio2">
-                        <label class="form-check-label" for="precio2">
-                          Añadir al carrito
-                        </label>
-                      </div>
-    
-                    </div>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img src="../img/microsd.jpg" alt="microSD" class="bd-placeholder-img card-img-top"
-                    width="100%" height="225" role="img"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em";>Tarjeta MicroSD</text><img>
-                  <div class="card-body">
-                    <p class="card-text">Tarjeta MicroSD de 128GB original de Nintendo, para tener más espacio dentro de su Nintendo Switch a $28</p>
-                    <div class="d-flex justify-content-between align-items-center">
-    
-                      <div class="form-check">
-                        <input class="form-check-input producto1" type="checkbox" value="" id="precio3">
-                        <label class="form-check-label" for="precio3">
-                          Añadir al carrito
-                        </label>
-                      </div>
-    
-                    </div>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img src="../img/contact.jpg" alt="contacCleaner" class="bd-placeholder-img card-img-top"
-                    width="100%" height="225" role="img"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em";>Contact Cleaner</text><img>
-                  <div class="card-body">
-                    <p class="card-text">Producto utilizado para poder limpiar componentes electrónicos a $12.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-    
-                      <div class="form-check">
-                        <input class="form-check-input producto1" type="checkbox" value="" id="precio4">
-                        <label class="form-check-label" for="precio4">
-                          Añadir al carrito
-                        </label>
-                      </div>
-    
-                    </div>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img src="../img/pasta.jpg" alt="pastaTermica" class="bd-placeholder-img card-img-top"
-                    width="100%" height="225" role="img"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em";>Pasta Termica</text><img>
-                  <div class="card-body">
-                    <p class="card-text">¿Desea limpiar a fondo su computadora? No olvide cambiar la pasta térmica en el procesador por $15.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-    
-                      <div class="form-check">
-                        <input class="form-check-input producto1" type="checkbox" value="" id="precio5">
-                        <label class="form-check-label" for="precio5">
-                          Añadir al carrito
-                        </label>
-                      </div>
-    
-                    </div>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img src="../img/cargador.jpg" alt="cargadorUniversal" class="bd-placeholder-img card-img-top"
-                    width="100%" height="225" role="img"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef"
-                    dy=".3em";>Cargador Universal</text><img>
-                  <div class="card-body">
-                    <p class="card-text">La mejor opción para poder encontrar un nuevo cargador para uno o varios equipos cuyo cargador original es difícil de encontrar a $23.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-    
-                      <div class="form-check">
-                        <input class="form-check-input producto1" type="checkbox" value="" id="precio6">
-                        <label class="form-check-label" for="precio6">
-                          Añadir al carrito
-                        </label>
-                      </div>
-    
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
-              
-          </div>
 
       </div>
+    </div>
+  </div>
 
       <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h4 class="fontWhite fontCenter">Visita nuestras redes</h4>
-                </div>
+          <div class="row">
+            <div class="col-12">
+              <h4 class="fontWhite fontCenter">Visita nuestras redes</h4>
             </div>
-            <div class="row">
-                <div class="col-4 fontCenter hoverIcons"><a><i class="bi bi-facebook"></i></a></div>
-                <div class="col-4 fontCenter hoverIcons"><a><i class="bi bi-twitter"></i></a></div>
-                <div class="col-4 fontCenter hoverIcons"><a><i class="bi bi-instagram"></i></i></a></div>
-            </div>
-            
-            <hr class="fontWhite">
+          </div>
+          <div class="row">
+            <div class="col-4 fontCenter hoverIcons"><a><i class="bi bi-facebook"></i></a></div>
+            <div class="col-4 fontCenter hoverIcons"><a><i class="bi bi-twitter"></i></a></div>
+            <div class="col-4 fontCenter hoverIcons"><a><i class="bi bi-instagram"></i></i></a></div>
+          </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <p class="fontWhite fontCenter">Todos los derechos reservados</p>
-                </div>
+          <hr class="fontWhite">
+
+          <div class="row">
+            <div class="col-12">
+              <p class="fontWhite fontCenter">Todos los derechos reservados</p>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <p class="fontWhite fontCenter">Nombre - carnet</p>
-                    <p class="fontWhite fontCenter">Nombre - carnet</p>
-                </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="fontWhite fontCenter">Nombre - carnet</p>
+              <p class="fontWhite fontCenter">Nombre - carnet</p>
             </div>
+          </div>
         </div>
       </footer>
 
       <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="../js/shop.js"></script>
+      <script src="../js/index.js"></script>
       <script src="../js/general.js" defer></script>
 </body>
+
 </html>

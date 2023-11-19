@@ -61,12 +61,14 @@ function initiation() {
       if(document.URL.includes('index.html')){
       btnSesion.innerHTML =`
       <li><a class="dropdown-item" href="pages/adminProfile.html" >Administrador</a></li>
+      <li><a class="dropdown-item" href="pages/eliminar.html" >Eliminar usuarios</a></li>
       <li><a class="dropdown-item" href="index.html" id="closeSesion">Cerrar sesion</a></li>
       `;
 
       }else{
         btnSesion.innerHTML =`
       <li><a class="dropdown-item" href="adminProfile.html" >Administrador</a></li>
+      <li><a class="dropdown-item" href="eliminar.html" >Eliminar usuarios</a></li>
       <li><a class="dropdown-item" href="../index.html" id="closeSesion">Cerrar sesion</a></li>
       `;
       }

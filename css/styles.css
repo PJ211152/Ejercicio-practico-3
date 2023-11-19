@@ -49,6 +49,20 @@ footer{
     overflow: hidden;
 }
 
+.container_U{
+    background-color: #989898;
+    border-radius: 20px;
+    margin-top: 1em;
+    padding: 10px;
+}
+
+.container_E{
+    background-color: #989898;
+    border-radius: 20px;
+    margin-top: 1em;
+    padding: 10px;
+}
+
 /*--------Fuentes y colores--------*/
 
 .fontWhite{
@@ -57,6 +71,10 @@ footer{
 
 .fontCenter{
     text-align: center;
+}
+
+.fontBold{
+ font-weight: bold;
 }
 
 /*--------Funciones con el mouse--------*/

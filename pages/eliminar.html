@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light navColor">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="../src/Logo.svg"> Registro</a>
+          <a class="navbar-brand" href="#"><img src="../src/Logo.svg"> Eliminar usuarios</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -44,54 +44,24 @@
       </nav> 
 
       <div class="container_gen">
-        
-        <div class="col-12">
-          <div class="form-container gap">
+        <div class="container">
             <div class="row">
-              <div class="col-6">
-                <label for="idNombre" class="mt-2">Nombre:</label>
-                <input class="form-control" id="idNombre" placeholder="Nombre">
-              </div>
-              <div class="col-6">
-                <label for="idApellido" class="mt-2">Apellido:</label>
-                <input class="form-control" id="idApellido" placeholder="Apellido">
-              </div>
+                <div class="col-12">
+                    <label for="busqueda" class="mb-1">Ingrese el nombre de usuario</label>
+                    <input type="text" class="form-control" id="inputBusqueda" name="busqueda" placeholder="Ingrese el nombre del usuario a eliminar">
+                    
+                </div>
             </div>
             <div class="row">
-              <div class="col-6">
-                <label for="idNombreUsuario" class="mt-2">Nombre de usuario:</label>
-                <input class="form-control" id="idNombreUsuario" placeholder="Nombre de usuario">
-              </div>
-              <div class="col-6">
-                <label for="idTelefono" class="mt-2">Edad:</label>
-                <input class="form-control" id="idEdad" type="number" placeholder="Ingrese su edad">
-              </div>
+                <div class="col-12 fontCenter">
+                    <button id="btnBuscar" class="btn btn-primary mt-2"> Buscar</button>
+                </div>
             </div>
-    
-            <label for="idCorreo" class="mt-2">Correo:</label>
-            <input class="form-control" id="idCorreo" placeholder="Correo" type="email">
-    
-            <div class="row">
-              <div class="col-6">
-                <label for="idContrasena" class="mt-2">Contraseña:</label>
-                <input class="form-control" id="idContrasena" type="password" placeholder="Contraseña">
-                <p id="security_level"></p>
-              </div>
-              <div class="col-6">
-                <label for="idContrasenaRep" class="mt-2">Confirma tu Contraseña:</label>
-                <input class="form-control" id="idContrasenaRep" type="password"
-                  placeholder="Escriba de nuevo su contraseña">
-              </div>
-            </div>
-            
-            <div class="fontCenter">
-              <button class="btn btn-primary mt-3" id="btnRegistrar">Registrar</button>
-            </div>
-    
-          </div>
-    
-          
         </div>
+        <div id="idContainerUserEliminate">
+
+        </div>
+        
 
       </div>
 
@@ -125,7 +95,7 @@
       </footer>
 
       <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="../js/register.js" defer></script>
+      <script src="../js/eliminar.js" defer></script>
       <script src="../js/general.js" defer></script>
 </body>
 </html>
